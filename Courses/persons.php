@@ -7,6 +7,7 @@
         private $id;
         private $name;
         private $nameErr;
+				private $Err;
 		private $description;
         private $email;
         private $emailErr;
@@ -75,7 +76,7 @@
                             <h3>Courses</h3>
                         </div>
                         <div class='row'>
-                            <a class='btn btn-primary' onclick='personsRequest(\"displayCreate\")'>Add Course</a>
+                            <a class='btn btn-primary' onclick='personsRequest(\"displayCreate\")'>Create</a>
                             <table class='table table-striped table-bordered' style='background-color: lightgrey !important'>
                                 <thead>
                                     <tr>
@@ -605,182 +606,182 @@
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course Name</label>
                                 <div class='controls'>
-                                    <input id='name' type='text' required>
+                                    <input id='name' type='text' value='{$rec['name']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Description</label>
                                 <div class='controls'>
-                                    <input id='description' type='text' required>
+                                    <input id='description' type='text' value='{$rec['description']}'required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Email</label>
                                 <div class='controls'>
-                                    <input id='email' type='text' required>
+                                    <input id='email' type='text' value='{$rec['email']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Address</label>
                                 <div class='controls'>
-                                    <input id='address' type='text' required>
+                                    <input id='address' type='text' value='{$rec['address']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>City</label>
                                 <div class='controls'>
-                                    <input id='city' type='text' required>
+                                    <input id='city' type='text' value='{$rec['city']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>State</label>
                                 <div class='controls'>
-                                    <input id='state' type='text' required>
+                                    <input id='state' type='text' value='{$rec['state']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Zip</label>
                                 <div class='controls'>
-                                    <input id='zip' type='text' required>
+                                    <input id='zip' type='text' value='{$rec['zip']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Phone</label>
                                 <div class='controls'>
-                                    <input id='phone' type='text' required>
+                                    <input id='phone' type='text' value='{$rec['phone']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 1</label>
                                 <div class='controls'>
-                                    <input id='par01' type='text' required>
+                                    <input id='par01' type='text' value='{$rec['par01']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 2</label>
                                 <div class='controls'>
-                                    <input id='par02' type='text' required>
+                                    <input id='par02' type='text' value='{$rec['par02']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 3</label>
                                 <div class='controls'>
-                                    <input id='par03' type='text' required>
+                                    <input id='par03' type='text' value='{$rec['par03']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 4</label>
                                 <div class='controls'>
-                                    <input id='par04' type='text' required>
+                                    <input id='par04' type='text' value='{$rec['par04']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 5</label>
                                 <div class='controls'>
-                                    <input id='par05' type='text' required>
+                                    <input id='par05' type='text' value='{$rec['par05']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 6</label>
                                 <div class='controls'>
-                                    <input id='par06' type='text' required>
+                                    <input id='par06' type='text' value='{$rec['par06']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 7</label>
                                 <div class='controls'>
-                                    <input id='par07' type='text' required>
+                                    <input id='par07' type='text' value='{$rec['par07']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 8</label>
                                 <div class='controls'>
-                                    <input id='par08' type='text' required>
+                                    <input id='par08' type='text' value='{$rec['par08']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 9</label>
                                 <div class='controls'>
-                                    <input id='par09' type='text' required>
+                                    <input id='par09' type='text' value='{$rec['par09']}'  required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 10</label>
                                 <div class='controls'>
-                                    <input id='par10' type='text' required>
+                                    <input id='par10' type='text' value='{$rec['par10']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 11</label>
                                 <div class='controls'>
-                                    <input id='par11' type='text' required>
+                                    <input id='par11' type='text' value='{$rec['par11']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 12</label>
                                 <div class='controls'>
-                                    <input id='par12' type='text' required>
+                                    <input id='par12' type='text' value='{$rec['par12']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 13</label>
                                 <div class='controls'>
-                                    <input id='par13' type='text' required>
+                                    <input id='par13' type='text' value='{$rec['par13']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 14</label>
                                 <div class='controls'>
-                                    <input id='par14' type='text' required>
+                                    <input id='par14' type='text' value='{$rec['par14']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 15</label>
                                 <div class='controls'>
-                                    <input id='par15' type='text' required>
+                                    <input id='par15' type='text' value='{$rec['par15']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 16</label>
                                 <div class='controls'>
-                                    <input id='par16' type='text' required>
+                                    <input id='par16' type='text' value='{$rec['par16']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 17</label>
                                 <div class='controls'>
-                                    <input id='par17' type='text' required>
+                                    <input id='par17' type='text' value='{$rec['par17']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 18</label>
                                 <div class='controls'>
-                                    <input id='par18' type='text' required>
+                                    <input id='par18' type='text' value='{$rec['par18']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
@@ -794,11 +795,12 @@
         }
         
         // Updates a record within the database.
-        public function updateRecord() {
+        public function updateRecord() {						
             if ($this->validate()) {
+							echo "Here";
                 Database::prepare(
-                    "UPDATE tt_rounds SET name = ?, description = ?, email = ?, address = ?, city = ?, state = ?, zip = ?, phone = ?, par01 = ?, par02 = ?, par03 = ?, par04 = ?, par05 = ?, par06 = ?, par07 = ?, par08 = ?, par09 = ?, par10 = ?, par11 = ?, par12 = ?, par13 = ?, par14 = ?, par15 = ?, par16 = ?, par17 = ?, par18 = ? WHERE id = ?",
-                    array(array($this->name, $this->description, $this->email, $this->address, $this->city, $this->state, $this->zip, $this->phone, $this->par01, $this->par02, $this->par03, $this->par04, $this->par05, $this->par06, $this->par07, $this->par08, $this->par09, $this->par10, $this->par11, $this->par12, $this->par13, $this->par14, $this->par15, $this->par16, $this->par17, $this->par18))
+                    "UPDATE tt_courses SET name = ?, description = ?, email = ?, address = ?, city = ?, state = ?, zip = ?, phone = ?, par01 = ?, par02 = ?, par03 = ?, par04 = ?, par05 = ?, par06 = ?, par07 = ?, par08 = ?, par09 = ?, par10 = ?, par11 = ?, par12 = ?, par13 = ?, par14 = ?, par15 = ?, par16 = ?, par17 = ?, par18 = ? WHERE id = ?",
+                    array($this->name, $this->description, $this->email, $this->address, $this->city, $this->state, $this->zip, $this->phone, $this->par01, $this->par02, $this->par03, $this->par04, $this->par05, $this->par06, $this->par07, $this->par08, $this->par09, $this->par10, $this->par11, $this->par12, $this->par13, $this->par14, $this->par15, $this->par16, $this->par17, $this->par18, $this->id)
                 );
                 $this->displayListScreen();
             } else {
@@ -838,7 +840,7 @@
         private function validate() {
             $valid = true;
             // Validate Mobile
-            if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
+            /*if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
                 $this->phoneErr = "Please enter a valid phone number.";
                 $valid = false;
             }
@@ -859,7 +861,7 @@
             if (empty($this->phone)) { 
                 $this->phoneErr = "Please enter a phone number.";
                 $valid = false; 
-            } print_r($valid);
+            }*/ print_r($valid);
             return $valid;
         }
     }

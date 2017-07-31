@@ -40,19 +40,19 @@
                             <h3>Persons</h3>
                         </div>
                         <div class='row'>
-                            <a class='btn btn-primary' onclick='personsRequest(\"displayCreate\")'>Add Person</a>
+                            <a class='btn btn-primary' onclick='personsRequest(\"displayCreate\")'>Create</a>
                             <table class='table table-striped table-bordered' style='background-color: lightgrey !important'>
                                 <thead>
                                     <tr>
                                         <th>First Name</th>
-										<th>Last Name</th>
-										<th>Email</th>
-										<th>Password</th>
-										<th>Phone</th>
-										<th>Address</th>
-										<th>City</th>
-										<th>State</th>
-										<th>Zip</th>
+																				<th>Last Name</th>
+																				<th>Email</th>
+																				<th>Password</th>
+																				<th>Phone</th>
+																				<th>Address</th>
+																				<th>City</th>
+																				<th>State</th>
+																				<th>Zip</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -164,7 +164,7 @@
         public function createRecord() {
             if ($this->validate()) {
                 Database::prepare(
-                    "INSERT INTO tt_persons (fname, lname, email, password, phone, address, city, state, zip) VALUES (?,?,?)",
+                    "INSERT INTO tt_persons (fname, lname, email, password, phone, address, city, state, zip) VALUES (?,?,?,?,?,?,?,?,?)",
                     array($this->fname, $this->lname,$this->email, $this->password, $this->phone, $this->address, $this->city, $this->state, $this->zip)
                 );
                 $this->displayListScreen();
@@ -381,7 +381,7 @@
         private function validate() {
             $valid = true;
             // Validate Mobile
-            if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
+            /*if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
                 $this->phoneErr = "Please enter a valid phone number.";
                 $valid = false;
             }
@@ -389,7 +389,7 @@
             if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
                 $this->emailErr = "Please enter a valid email address.";
                 $valid = false;
-            }
+            }*/
             // Check for empty input.
             if (empty($this->fname)) { 
                 $this->fnameErr = "Please enter a name.";
