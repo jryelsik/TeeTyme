@@ -1,0 +1,101 @@
+Persons
+-------------------------------------------------
+-id: int
+-fname: string
+-lname: string
+-email: string
+-password: string
+-phone: string
+-address: string
+-city: string
+-state: string
+-zip: string
+-------------------------------------------------
++displayListScreen(): void
++displayCreateScreen(): void
++create(string,string,string,string,string,string,string,string,string,string): void
++displayReadScreen(int): void
++displayUpdateScreen(int): void
++update(int,string,string,string,string,string,string,string,string,string,string): void
++displayDeleteScreen(int): void
++delete(int): void
+
+
+
+
+Courses
+-------------------------------------------------
+-id: int
+-name: string
+-description: string
+-email: string
+-address: string
+-city: string
+-state: string
+-zip: string
+-phone: string
+-par01: int
+-par02: int
+-par03: int
+-par04: int
+-par05: int
+-par06: int
+-par07: int
+-par08: int
+-par09: int
+-par10: int
+-par11: int
+-par12: int
+-par13: int
+-par14: int
+-par15: int
+-par16: int
+-par17: int
+-par18: int
+-------------------------------------------------
++displayListScreen(): void
++displayCreateScreen(): void
++create(string,string,string,string,string,string,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int): void
++displayReadScreen(int): void
++displayUpdateScreen(int): void
++update(int,string,string,string,string,string,string,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,): void
++displayDeleteScreen(int): void
++delete(int): void
+
+
+
+
+Rounds
+-------------------------------------------------
+-id: int
+-person_id: int
+-course_id: int
+-teedate: string
+-teetime: string
+-stroke01: int
+-stroke02: int
+-stroke03: int
+-stroke04: int
+-stroke05: int
+-stroke06: int
+-stroke07: int
+-stroke08: int
+-stroke09: int
+-stroke10: int
+-stroke11: int
+-stroke12: int
+-stroke13: int
+-stroke14: int
+-stroke15: int
+-stroke16: int
+-stroke17: int
+-stroke18: int
+-------------------------------------------------
++displayListScreen(): void
++displayCreateScreen(): void
++create(int,int,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int): void
++displayReadScreen(int): void
++displayUpdateScreen(int): void
++update(int,int,int,string,string,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,): void
++displayDeleteScreen(int): void
++delete(int): void
