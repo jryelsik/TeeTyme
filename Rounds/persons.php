@@ -134,7 +134,6 @@
         public function displayCreateScreen() {
             echo "
                 <div class='container'>
-
                     <div class='span10 offset1'>
                         <div class='row'>
                             <h3>Create New Round</h3>
@@ -142,15 +141,23 @@
                         <div class='form-horizontal'>
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Person ID</label>
-                                <div class='controls'>
-                                    <input id='person_id' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
-                                </div>
-                            </div>
+								<div class='controls'>";
+									echo "<select name='person_id'>";
+										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
+											echo "<option value='".$row["id"]."'>".$row["person_id"]."</option>";
+										}
+									echo "</select>		
+									<span class='help-inline'>{$this->Err}</span>									
+								</div>
+                            </div>			
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course ID</label>
-                                <div class='controls'>
-                                    <input id='course_id' type='text' required>
+                                <div class='controls'>";
+									echo "<select name='person_id'>";
+										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
+											echo "<option value='".$row["id"]."'>".$row["course_id"]."</option>";
+										}
+									echo "</select>														
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
                             </div>
@@ -528,17 +535,25 @@
                         <div class='form-horizontal'>
 												<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Person_ID</label>
-                                <div class='controls'>
-                                    <input id='person_id' type='text' value='{$rec['person_id']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
-                                </div>
+                                <div class='controls'>";
+									echo "<select name='person_id'>";
+										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
+											echo "<option value='".$row["id"]."'>".$row["person_id"]."</option>";
+										}
+									echo "</select>		
+									<span class='help-inline'>{$this->Err}</span>									
+								</div>
                             </div>
 														<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course_ID</label>
-                                <div class='controls'>
-                                    <input id='course_id' type='text' value='{$rec['course_id']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
-                                </div>
+                                <div class='controls'>";
+									echo "<select name='person_id'>";
+										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
+											echo "<option value='".$row["id"]."'>".$row["course_id"]."</option>";
+										}
+									echo "</select>		
+									<span class='help-inline'>{$this->Err}</span>									
+								</div>
                             </div>
 														<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Tee Date</label>
@@ -734,10 +749,10 @@
         private function validate() {
             $valid = true;
             // Check for empty input.
-            /*if (empty($this->course_id || $this->person_id || $this->teedate || $this->teetime)) { 
+            if (empty($this->course_id || $this->person_id || $this->teedate || $this->teetime)) { 
                 $this->Err = "Please fill out this field.";
                 $valid = false; 
-            }*/
+            }
             print_r($valid);
             return $valid;
         }
