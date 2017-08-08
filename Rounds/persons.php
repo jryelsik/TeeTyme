@@ -557,7 +557,7 @@
                             </div>
 														<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Tee Date</label>
-                                <div class='controls'>
+                                <div class='controls'>	
                                     <input id='teedate' type='text' value='{$rec['teedate']}' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
