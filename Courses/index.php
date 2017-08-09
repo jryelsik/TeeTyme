@@ -2,7 +2,7 @@
     if(isset($_POST['table'])) {
         // Set Table
         if ($_POST['table'] == "tt_courses") {
-            require("persons.php");
+            require("courses.php");
             $table = new Persons(
                 $_POST['id'],
                 $_POST['name'],

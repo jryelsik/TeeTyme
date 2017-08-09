@@ -2,13 +2,13 @@
     if(isset($_POST['table'])) {
         // Set Table
         if ($_POST['table'] == "tt_rounds") {
-            require("persons.php");
+            require("rounds.php");
             $table = new Persons(
                 $_POST['id'],
-               //$_POST['person_id'],
-				//$_POST['course_id'],
-               // $_POST['teedate'],
-               // $_POST['teetime'],
+				$_POST['person_id'],
+				$_POST['course_id'],
+                $_POST['teedate'],
+                $_POST['teetime'],
 				$_POST['strokes01'],
 				$_POST['strokes02'],
 				$_POST['strokes03'],

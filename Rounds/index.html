@@ -24,17 +24,17 @@
             personsRequest("displayList");
         });
         
-        // Submit a request to the persons table.
+        // Submit a request to the rounds table.
         function personsRequest(action, id) {
             $.post(
                 "index.php",
                 "table="   + "tt_rounds"          +
                 "&action=" + action             +
                 "&id="     + id                 +
-                //"&person_id="   + $("#person_id").val()   +
-                //"&course_id="   + $("#course_id").val()   +
-				//"&teedate="     + $("#teedate").val()   +
-				//"&teetime="     + $("#teetime").val()   +
+                "&person_id="   + $("#person_id").val()   +
+                "&course_id="   + $("#course_id").val()   +
+				"&teedate="     + $("#teedate").val()   +
+				"&teetime="     + $("#teetime").val()   +
 				"&strokes01="   + $("#strokes01").val()	+
 				"&strokes02="   + $("#strokes02").val()	+	
 				"&strokes03="   + $("#strokes03").val()	+	
