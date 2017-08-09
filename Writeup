@@ -1,0 +1,4 @@
+TeeTyme is a website where you can record your golf statistics. You start by creating a player and entering all of their 
+information into the database. Then you select your player and golf course then you input the date, time, and strokes 
+when you played the round. You can also add golf courses if the one you are looking for isnt in the database. There is
+also an option to upload a picture and view the picture when ever you would like.
