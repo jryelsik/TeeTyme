@@ -8,14 +8,21 @@
         private $fname;
         private $fnameErr;
 		private $lname;
+		private $lnameErr;
         private $email;
         private $emailErr;
 		private $password;
+		private $passErr;		
         private $phone;
+		private $phoneErr;
 		private $address;
+		private $addressErr;
 		private $city;
+		private $cityErr;
 		private $state;
+		private $stateErr;
 		private $zip;
+		private $zipErr;
         
         // CONSTRUCTOR
         function __construct($id, $fname, $lname, $email, $password, $phone, $address, $city, $state, $zip) {
@@ -23,7 +30,7 @@
             $this->fname   = $fname;
 			$this->lname   = $lname;
             $this->email  = $email;
-			$this->password   = $password;
+			$this->password   = md5($password);
             $this->phone = $phone;
 			$this->address   = $address;
 			$this->city   = $city;
@@ -45,14 +52,14 @@
                                 <thead>
                                     <tr>
                                         <th>First Name</th>
-																				<th>Last Name</th>
-																				<th>Email</th>
-																				<th>Password</th>
-																				<th>Phone</th>
-																				<th>Address</th>
-																				<th>City</th>
-																				<th>State</th>
-																				<th>Zip</th>
+										<th>Last Name</th>
+										<th>Email</th>
+										<th>Password</th>
+										<th>Phone</th>
+										<th>Address</th>
+										<th>City</th>
+										<th>State</th>
+										<th>Zip</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -92,63 +99,63 @@
                                 <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>First Name</label>
                                 <div class='controls'>
                                     <input id='fname' type='text' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->fnameErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Last Name</label>
+                                <label class='control-label". ((empty($this->lnameErr))?'':' error') ."'>Last Name</label>
                                 <div class='controls'>
                                     <input id='lname' type='text' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->lnameErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->emailErr))?'':' error') ."'>email</label>
                                 <div class='controls'>
                                     <input id='email' type='text' placeholder='name@svsu.edu' required>
-                                    <span class='help-inline'>{$this->emailErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->emailErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Password</label>
+                                <label class='control-label". ((empty($this->passErr))?'':' error') ."'>Password</label>
                                 <div class='controls'>
                                     <input id='password' type='password' required>
-                                    <span class='help-inline'>{$this->nameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->passErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->phoneErr))?'':' error') ."'>Phone</label>
                                 <div class='controls'>
-                                    <input id='phone' type='text' placeholder='555-5555-555' required>
-                                    <span class='help-inline'>{$this->phoneErr}</span>
+                                    <input id='phone' type='text' placeholder='555-555-5555' required>
+                                    <span class='help-inline' style='color:red;'>{$this->phoneErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Address</label>
+                                <label class='control-label". ((empty($this->addressErr))?'':' error') ."'>Address</label>
                                 <div class='controls'>
                                     <input id='address' type='text' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->addressErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>City</label>
+                                <label class='control-label". ((empty($this->cityErr))?'':' error') ."'>City</label>
                                 <div class='controls'>
                                     <input id='city' type='text' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->cityErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>State</label>
+                                <label class='control-label". ((empty($this->stateErr))?'':' error') ."'>State</label>
                                 <div class='controls'>
                                     <input id='state' type='text' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->stateErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Zip</label>
+                                <label class='control-label". ((empty($this->zipErr))?'':' error') ."'>Zip</label>
                                 <div class='controls'>
                                     <input id='zip' type='text' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->zipErr}</span>
                                 </div>
                             </div>
                             <div class='form-actions'>
@@ -158,11 +165,13 @@
                         </div>
                     </div>
                 </div>";
+				
+				
         }
         
         // Adds a record to the database.
         public function createRecord() {
-            if ($this->validate()) {
+            if ($this->validate()) {				
                 Database::prepare(
                     "INSERT INTO tt_persons (fname, lname, email, password, phone, address, city, state, zip) VALUES (?,?,?,?,?,?,?,?,?)",
                     array($this->fname, $this->lname,$this->email, $this->password, $this->phone, $this->address, $this->city, $this->state, $this->zip)
@@ -170,7 +179,7 @@
                 $this->displayListScreen();
             } else {
                 $this->displayCreateScreen();
-            }
+            }			
         }
         
         // Display a form containing information about a specified record in the database.
@@ -275,56 +284,56 @@
                                 <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>First Name</label>
                                 <div class='controls'>
                                     <input id='fname' type='text' value='{$rec['fname']}' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->fnamerr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Last Name</label>
+                                <label class='control-label". ((empty($this->lnameErr))?'':' error') ."'>Last Name</label>
                                 <div class='controls'>
                                     <input id='lname' type='text' value='{$rec['lname']}' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->lnameErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->emailErr))?'':' error') ."'>Email</label>
                                 <div class='controls'>
                                     <input id='email' type='text' value='{$rec['email']}' required>
-                                    <span class='help-inline'>{$this->emailErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->emailErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
                                 <label class='control-label". ((empty($this->phoneErr))?'':' error') ."'>Phone</label>
                                 <div class='controls'>
                                     <input id='phone' type='text' value='{$rec['phone']}' required>
-                                    <span class='help-inline'>{$this->phoneErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->phoneErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Address</label>
+                                <label class='control-label". ((empty($this->addressErr))?'':' error') ."'>Address</label>
                                 <div class='controls'>
                                     <input id='address' type='text' value='{$rec['address']}' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->addressErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>City</label>
+                                <label class='control-label". ((empty($this->cityErr))?'':' error') ."'>City</label>
                                 <div class='controls'>
                                     <input id='city' type='text' value='{$rec['city']}' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->cityErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>State</label>
+                                <label class='control-label". ((empty($this->stateErr))?'':' error') ."'>State</label>
                                 <div class='controls'>
                                     <input id='state' type='text' value='{$rec['state']}' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->stateErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->fnameErr))?'':' error') ."'>Zip</label>
+                                <label class='control-label". ((empty($this->zipErr))?'':' error') ."'>Zip</label>
                                 <div class='controls'>
                                     <input id='zip' type='text' value='{$rec['zip']}' required>
-                                    <span class='help-inline'>{$this->fnameErr}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->zipErr}</span>
                                 </div>
                             </div>
                             <div class='form-actions'>
@@ -381,7 +390,7 @@
         private function validate() {
             $valid = true;
             // Validate Mobile
-            /*if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
+            if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
                 $this->phoneErr = "Please enter a valid phone number.";
                 $valid = false;
             }
@@ -389,18 +398,42 @@
             if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
                 $this->emailErr = "Please enter a valid email address.";
                 $valid = false;
-            }*/
+            }
             // Check for empty input.
             if (empty($this->fname)) { 
-                $this->fnameErr = "Please enter a name.";
+                $this->fnameErr = "Please fill out this field.";
                 $valid = false; 
             }
-            if (empty($this->email)) { 
+			if (empty($this->lname)) { 
+                $this->lnameErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->email)) { 
                 $this->emailErr = "Please enter an email.";
                 $valid = false; 
             }
-            if (empty($this->phone)) { 
+			if (empty($this->password)) { 
+                $this->passErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->phone)) { 
                 $this->phoneErr = "Please enter a phone number.";
+                $valid = false; 
+            }			
+			if (empty($this->address)) { 
+                $this->addressErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->city)) { 
+                $this->cityErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->state)) { 
+                $this->stateErr = "Please fill out this field.";
+                $valid = false; 
+            }
+            if (empty($this->zip)) { 
+                $this->zipErr = "Please fill out this field.";
                 $valid = false; 
             } print_r($valid);
             return $valid;

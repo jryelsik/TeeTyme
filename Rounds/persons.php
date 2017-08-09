@@ -6,9 +6,9 @@
         // DATA MEMBERS
         private $id;
         private $person_id;
-		private $Err;
         private $course_id;
 		private $teedate;
+		private $Err;
         private $teetime;
 		private $strokes01;
 		private $strokes02;
@@ -139,30 +139,21 @@
                             <h3>Create New Round</h3>
                         </div>
                         <div class='form-horizontal'>
-                            <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Person ID</label>
-								<div class='controls'>";
-									echo "<select name='person_id'>";
-										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
-											echo "<option value='".$row["id"]."'>".$row["person_id"]."</option>";
-										}
-									echo "</select>		
-									<span class='help-inline'>{$this->Err}</span>									
-								</div>
-                            </div>			
-                            <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course ID</label>
-                                <div class='controls'>";
-									echo "<select name='person_id'>";
-										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
-											echo "<option value='".$row["id"]."'>".$row["course_id"]."</option>";
-										}
-									echo "</select>														
+							<div class='control-group'>
+                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Person_ID</label>
+                                <div class='controls'>
+                                    <input id='person_id' type='text' required>
                                     <span class='help-inline'>{$this->Err}</span>
                                 </div>
-                            </div>
-                            <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Tee Date (0000-00-00)</label>
+                            </div><div class='control-group'>
+                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course_ID</label>
+                                <div class='controls'>
+                                    <input id='course_id' type='text' required>
+                                    <span class='help-inline'>{$this->Err}</span>
+                                </div>
+                            </div>	
+							<div class='control-group'>
+                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Tee Date</label>
                                 <div class='controls'>
                                     <input id='teedate' type='text' required>
                                     <span class='help-inline'>{$this->Err}</span>
@@ -303,7 +294,7 @@
                             </div>
                             <div class='form-actions'>
                                 <button class='btn btn-success' onclick='personsRequest(\"createRecord\")'>Create</button>
-                                <a class='btn' onclick='personsRequest(\"displayList\")'>Back</a>
+                                <a class='btn' onclick='personsRequest(\"displayList\")'>Back</a>								
                             </div>
                         </div>
                     </div>
@@ -535,26 +526,17 @@
                         <div class='form-horizontal'>
 												<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Person_ID</label>
-                                <div class='controls'>";
-									echo "<select name='person_id'>";
-										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
-											echo "<option value='".$row["id"]."'>".$row["person_id"]."</option>";
-										}
-									echo "</select>		
-									<span class='help-inline'>{$this->Err}</span>									
-								</div>
-                            </div>
-														<div class='control-group'>
+                                <div class='controls'>
+                                    <input id='person_id' type='text' required>
+                                    <span class='help-inline'>{$this->Err}</span>
+                                </div>
+                            </div><div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course_ID</label>
-                                <div class='controls'>";
-									echo "<select name='person_id'>";
-										foreach (Database::prepare('SELECT * FROM `tt_rounds`', array()) as $row) {
-											echo "<option value='".$row["id"]."'>".$row["course_id"]."</option>";
-										}
-									echo "</select>		
-									<span class='help-inline'>{$this->Err}</span>									
-								</div>
-                            </div>
+                                <div class='controls'>
+                                    <input id='course_id' type='text' required>
+                                    <span class='help-inline'>{$this->Err}</span>
+                                </div>
+                            </div>	
 														<div class='control-group'>
                                 <label class='control-label". ((empty($this->Err))?'':' error') ."'>Tee Date</label>
                                 <div class='controls'>	
@@ -749,10 +731,10 @@
         private function validate() {
             $valid = true;
             // Check for empty input.
-            if (empty($this->course_id || $this->person_id || $this->teedate || $this->teetime)) { 
-                $this->Err = "Please fill out this field.";
-                $valid = false; 
-            }
+            //if (empty($this->teedate || $this->teetime || $this->strokes01 || $this->strokes02 || $this->strokes03 || $this->strokes04 || $this->strokes05 || $this->strokes06 || $this->strokes07 || $this->strokes08 || $this->strokes09 || $this->strokes10 || $this->strokes11 || $this->strokes12 || $this->strokes13 || $this->strokes14 || $this->strokes15 || $this->strokes16 || $this->strokes17 || $this->strokes18)) { 
+                //$this->Err = "Please fill out this field.";
+               // $valid = false; 
+            //}
             print_r($valid);
             return $valid;
         }

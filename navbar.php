@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "../../database/database.php";
+require "../../database/databaseTT.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,19 +22,25 @@ require "../../database/database.php";
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="../Persons/index.html">Persons</a>
+                        <a href="https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/Persons/">Persons</a>
                     </li>
                     <li>
-                        <a href="../Courses/index.html">Courses</a>
+                        <a href="https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/Courses/">Courses</a>
                     </li>
                     <li>
-                        <a href="../Rounds/index.html">Rounds</a>
+                        <a href="https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/Rounds/">Rounds</a>
                     </li>				
 					<li>
-						<a href="../logout.php">Log Out</a>
+						<a href="https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/logout.php">Log Out</a>
 					</li>
 					<li>
 						<a><strong>Welcome, <?php echo $_SESSION['username']; ?></strong></a>
+					</li>
+					<li>
+						<a href="https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/FileUploadView/fileUpload.php">Upload/View Pictures</a>
+					</li>
+					<li>
+						<a href="https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/jsonTT.php">JSON Service</a>
 					</li>
                 </ul>
             </div>

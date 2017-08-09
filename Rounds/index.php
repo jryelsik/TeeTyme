@@ -5,10 +5,10 @@
             require("persons.php");
             $table = new Persons(
                 $_POST['id'],
-                $_POST['person_id'],
-				$_POST['course_id'],
-                $_POST['teedate'],
-                $_POST['teetime'],
+               //$_POST['person_id'],
+				//$_POST['course_id'],
+               // $_POST['teedate'],
+               // $_POST['teetime'],
 				$_POST['strokes01'],
 				$_POST['strokes02'],
 				$_POST['strokes03'],

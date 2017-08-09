@@ -7,34 +7,56 @@
         private $id;
         private $name;
         private $nameErr;
-				private $Err;
 		private $description;
+		private $descriptionErr;
         private $email;
         private $emailErr;
 		private $address;
+		private $addressErr;
         private $city;
+		private $cityErr;
 		private $state;
+		private $stateErr;
 		private $zip;
+		private $zipErr;
 		private $phone;
         private $phoneErr;
 		private $par01;
+		private $Err1;
 		private $par02;
+		private $Err2;
 		private $par03;
+		private $Err3;
 		private $par04;
+		private $Err4;
 		private $par05;
+		private $Err5;
 		private $par06;
+		private $Err6;
 		private $par07;
+		private $Err7;
 		private $par08;
+		private $Err8;
 		private $par09;
+		private $Err9;
 		private $par10;
+		private $Err10;
 		private $par11;
+		private $Err11;
 		private $par12;
+		private $Err12;
 		private $par13;
+		private $Err13;
 		private $par14;
+		private $Err14;
 		private $par15;
+		private $Err15;
 		private $par16;
+		private $Err16;
 		private $par17;
+		private $Err17;
 		private $par18;
+		private $Err18;
         
         // CONSTRUCTOR
         function __construct($id, $name, $description, $email, $address, $city, $state, $zip, $phone, $par01, $par02, $par03, $par04, $par05, $par06, $par07, $par08, $par09, $par10, $par11, $par12, $par13, $par14, $par15, $par16, $par17, $par18) {
@@ -158,185 +180,185 @@
                             <h3>Create Courses</h3>
                         </div>
                         <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course Name</label>
+                                <label class='control-label". ((empty($this->nameErr))?'':' error') ."'>Course Name</label>
                                 <div class='controls'>
                                     <input id='name' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->nameErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Description</label>
+                                <label class='control-label". ((empty($this->descriptionErr))?'':' error') ."'>Description</label>
                                 <div class='controls'>
                                     <input id='description' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->descriptionErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Email</label>
+                                <label class='control-label". ((empty($this->emailErr))?'':' error') ."'>Email</label>
                                 <div class='controls'>
                                     <input id='email' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->emailErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Address</label>
+                                <label class='control-label". ((empty($this->addressErr))?'':' error') ."'>Address</label>
                                 <div class='controls'>
                                     <input id='address' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->addressErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>City</label>
+                                <label class='control-label". ((empty($this->cityErr))?'':' error') ."'>City</label>
                                 <div class='controls'>
                                     <input id='city' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->cityErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>State</label>
+                                <label class='control-label". ((empty($this->stateErr))?'':' error') ."'>State</label>
                                 <div class='controls'>
                                     <input id='state' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->stateErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Zip</label>
+                                <label class='control-label". ((empty($this->zipErr))?'':' error') ."'>Zip</label>
                                 <div class='controls'>
                                     <input id='zip' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->zipErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Phone</label>
+                                <label class='control-label". ((empty($this->phoneErr))?'':' error') ."'>Phone</label>
                                 <div class='controls'>
                                     <input id='phone' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->phoneErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 1</label>
+                                <label class='control-label". ((empty($this->Err1))?'':' error') ."'>Par 1</label>
                                 <div class='controls'>
                                     <input id='par01' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err1}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 2</label>
+                                <label class='control-label". ((empty($this->Err2))?'':' error') ."'>Par 2</label>
                                 <div class='controls'>
                                     <input id='par02' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err2}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 3</label>
+                                <label class='control-label". ((empty($this->Err3))?'':' error') ."'>Par 3</label>
                                 <div class='controls'>
                                     <input id='par03' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err3}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 4</label>
+                                <label class='control-label". ((empty($this->Err4))?'':' error') ."'>Par 4</label>
                                 <div class='controls'>
                                     <input id='par04' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err4}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 5</label>
+                                <label class='control-label". ((empty($this->Err5))?'':' error') ."'>Par 5</label>
                                 <div class='controls'>
                                     <input id='par05' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err5}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 6</label>
+                                <label class='control-label". ((empty($this->Err6))?'':' error') ."'>Par 6</label>
                                 <div class='controls'>
                                     <input id='par06' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err6}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 7</label>
+                                <label class='control-label". ((empty($this->Err7))?'':' error') ."'>Par 7</label>
                                 <div class='controls'>
                                     <input id='par07' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err7}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 8</label>
+                                <label class='control-label". ((empty($this->Err8))?'':' error') ."'>Par 8</label>
                                 <div class='controls'>
                                     <input id='par08' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err8}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 9</label>
+                                <label class='control-label". ((empty($this->Err9))?'':' error') ."'>Par 9</label>
                                 <div class='controls'>
                                     <input id='par09' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err9}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 10</label>
+                                <label class='control-label". ((empty($this->Err10))?'':' error') ."'>Par 10</label>
                                 <div class='controls'>
                                     <input id='par10' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err10}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 11</label>
+                                <label class='control-label". ((empty($this->Err11))?'':' error') ."'>Par 11</label>
                                 <div class='controls'>
                                     <input id='par11' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err11}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 12</label>
+                                <label class='control-label". ((empty($this->Err12))?'':' error') ."'>Par 12</label>
                                 <div class='controls'>
                                     <input id='par12' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err12}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 13</label>
+                                <label class='control-label". ((empty($this->Err13))?'':' error') ."'>Par 13</label>
                                 <div class='controls'>
                                     <input id='par13' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err13}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 14</label>
+                                <label class='control-label". ((empty($this->Err14))?'':' error') ."'>Par 14</label>
                                 <div class='controls'>
-                                    <input id='Par14' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <input id='par14' type='text' required>
+                                    <span class='help-inline' style='color:red;'>{$this->Err14}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 15</label>
+                                <label class='control-label". ((empty($this->Err15))?'':' error') ."'>Par 15</label>
                                 <div class='controls'>
                                     <input id='par15' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err15}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 16</label>
+                                <label class='control-label". ((empty($this->Err16))?'':' error') ."'>Par 16</label>
                                 <div class='controls'>
                                     <input id='par16' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err16}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 17</label>
+                                <label class='control-label". ((empty($this->Err17))?'':' error') ."'>Par 17</label>
                                 <div class='controls'>
                                     <input id='par17' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err17}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 18</label>
+                                <label class='control-label". ((empty($this->Err18))?'':' error') ."'>Par 18</label>
                                 <div class='controls'>
                                     <input id='par18' type='text' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline' style='color:red;'>{$this->Err18}</span>
                                 </div>
                             </div>
                             <div class='form-actions'>
@@ -604,185 +626,185 @@
                         </div>
                         <div class='form-horizontal'>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Course Name</label>
+                                <label class='control-label". ((empty($this->nameErr))?'':' error') ."'>Course Name</label>
                                 <div class='controls'>
                                     <input id='name' type='text' value='{$rec['name']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->nameErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Description</label>
+                                <label class='control-label". ((empty($this->descriptionErr))?'':' error') ."'>Description</label>
                                 <div class='controls'>
                                     <input id='description' type='text' value='{$rec['description']}'required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->descriptionErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Email</label>
+                                <label class='control-label". ((empty($this->emailErr))?'':' error') ."'>Email</label>
                                 <div class='controls'>
                                     <input id='email' type='text' value='{$rec['email']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->emailErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Address</label>
+                                <label class='control-label". ((empty($this->addressErr))?'':' error') ."'>Address</label>
                                 <div class='controls'>
                                     <input id='address' type='text' value='{$rec['address']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->addressErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>City</label>
+                                <label class='control-label". ((empty($this->cityErr))?'':' error') ."'>City</label>
                                 <div class='controls'>
                                     <input id='city' type='text' value='{$rec['city']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->cityErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>State</label>
+                                <label class='control-label". ((empty($this->stateErr))?'':' error') ."'>State</label>
                                 <div class='controls'>
                                     <input id='state' type='text' value='{$rec['state']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->stateErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Zip</label>
+                                <label class='control-label". ((empty($this->zipErr))?'':' error') ."'>Zip</label>
                                 <div class='controls'>
                                     <input id='zip' type='text' value='{$rec['zip']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->zipErr}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Phone</label>
+                                <label class='control-label". ((empty($this->phoneErr))?'':' error') ."'>Phone</label>
                                 <div class='controls'>
                                     <input id='phone' type='text' value='{$rec['phone']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->phoneErr}</span>
                                 </div>
                             </div>
                             <div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 1</label>
+                                <label class='control-label". ((empty($this->Err1))?'':' error') ."'>Par 1</label>
                                 <div class='controls'>
                                     <input id='par01' type='text' value='{$rec['par01']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err1}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 2</label>
+                                <label class='control-label". ((empty($this->Err2))?'':' error') ."'>Par 2</label>
                                 <div class='controls'>
                                     <input id='par02' type='text' value='{$rec['par02']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err2}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 3</label>
+                                <label class='control-label". ((empty($this->Err3))?'':' error') ."'>Par 3</label>
                                 <div class='controls'>
                                     <input id='par03' type='text' value='{$rec['par03']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err3}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 4</label>
+                                <label class='control-label". ((empty($this->Err4))?'':' error') ."'>Par 4</label>
                                 <div class='controls'>
                                     <input id='par04' type='text' value='{$rec['par04']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err4}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 5</label>
+                                <label class='control-label". ((empty($this->Err5))?'':' error') ."'>Par 5</label>
                                 <div class='controls'>
                                     <input id='par05' type='text' value='{$rec['par05']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err5}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 6</label>
+                                <label class='control-label". ((empty($this->Err6))?'':' error') ."'>Par 6</label>
                                 <div class='controls'>
                                     <input id='par06' type='text' value='{$rec['par06']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err6}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 7</label>
+                                <label class='control-label". ((empty($this->Err7))?'':' error') ."'>Par 7</label>
                                 <div class='controls'>
                                     <input id='par07' type='text' value='{$rec['par07']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err7}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 8</label>
+                                <label class='control-label". ((empty($this->Err8))?'':' error') ."'>Par 8</label>
                                 <div class='controls'>
                                     <input id='par08' type='text' value='{$rec['par08']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err8}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 9</label>
+                                <label class='control-label". ((empty($this->Err9))?'':' error') ."'>Par 9</label>
                                 <div class='controls'>
                                     <input id='par09' type='text' value='{$rec['par09']}'  required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err9}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 10</label>
+                                <label class='control-label". ((empty($this->Err10))?'':' error') ."'>Par 10</label>
                                 <div class='controls'>
                                     <input id='par10' type='text' value='{$rec['par10']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err10}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 11</label>
+                                <label class='control-label". ((empty($this->Err11))?'':' error') ."'>Par 11</label>
                                 <div class='controls'>
                                     <input id='par11' type='text' value='{$rec['par11']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err11}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 12</label>
+                                <label class='control-label". ((empty($this->Err12))?'':' error') ."'>Par 12</label>
                                 <div class='controls'>
                                     <input id='par12' type='text' value='{$rec['par12']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err12}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 13</label>
+                                <label class='control-label". ((empty($this->Err13))?'':' error') ."'>Par 13</label>
                                 <div class='controls'>
                                     <input id='par13' type='text' value='{$rec['par13']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err13}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 14</label>
+                                <label class='control-label". ((empty($this->Err14))?'':' error') ."'>Par 14</label>
                                 <div class='controls'>
                                     <input id='par14' type='text' value='{$rec['par14']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err14}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 15</label>
+                                <label class='control-label". ((empty($this->Err15))?'':' error') ."'>Par 15</label>
                                 <div class='controls'>
                                     <input id='par15' type='text' value='{$rec['par15']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err15}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 16</label>
+                                <label class='control-label". ((empty($this->Err16))?'':' error') ."'>Par 16</label>
                                 <div class='controls'>
                                     <input id='par16' type='text' value='{$rec['par16']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err16}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 17</label>
+                                <label class='control-label". ((empty($this->Err17))?'':' error') ."'>Par 17</label>
                                 <div class='controls'>
                                     <input id='par17' type='text' value='{$rec['par17']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err17}</span>
                                 </div>
                             </div>
 							<div class='control-group'>
-                                <label class='control-label". ((empty($this->Err))?'':' error') ."'>Par 18</label>
+                                <label class='control-label". ((empty($this->Err18))?'':' error') ."'>Par 18</label>
                                 <div class='controls'>
                                     <input id='par18' type='text' value='{$rec['par18']}' required>
-                                    <span class='help-inline'>{$this->Err}</span>
+                                    <span class='help-inline'>{$this->Err18}</span>
                                 </div>
                             </div>
 							<div class='form-actions'>
@@ -797,7 +819,6 @@
         // Updates a record within the database.
         public function updateRecord() {						
             if ($this->validate()) {
-							echo "Here";
                 Database::prepare(
                     "UPDATE tt_courses SET name = ?, description = ?, email = ?, address = ?, city = ?, state = ?, zip = ?, phone = ?, par01 = ?, par02 = ?, par03 = ?, par04 = ?, par05 = ?, par06 = ?, par07 = ?, par08 = ?, par09 = ?, par10 = ?, par11 = ?, par12 = ?, par13 = ?, par14 = ?, par15 = ?, par16 = ?, par17 = ?, par18 = ? WHERE id = ?",
                     array($this->name, $this->description, $this->email, $this->address, $this->city, $this->state, $this->zip, $this->phone, $this->par01, $this->par02, $this->par03, $this->par04, $this->par05, $this->par06, $this->par07, $this->par08, $this->par09, $this->par10, $this->par11, $this->par12, $this->par13, $this->par14, $this->par15, $this->par16, $this->par17, $this->par18, $this->id)
@@ -840,7 +861,7 @@
         private function validate() {
             $valid = true;
             // Validate Mobile
-            /*if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
+            if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $this->phone)) {
                 $this->phoneErr = "Please enter a valid phone number.";
                 $valid = false;
             }
@@ -850,18 +871,110 @@
                 $valid = false;
             }
             // Check for empty input.
-            if (empty($this->fname)) { 
-                $this->fnameErr = "Please enter a name.";
+            if (empty($this->name)) { 
+                $this->nameErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->description)) { 
+                $this->descriptionErr = "Please fill out this field.";
                 $valid = false; 
             }
             if (empty($this->email)) { 
                 $this->emailErr = "Please enter an email.";
                 $valid = false; 
             }
+			if (empty($this->address)) { 
+                $this->addressErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->city)) { 
+                $this->cityErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->state)) { 
+                $this->stateErr = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->zip)) { 
+                $this->zipErr = "Please fill out this field.";
+                $valid = false; 
+            }
             if (empty($this->phone)) { 
                 $this->phoneErr = "Please enter a phone number.";
                 $valid = false; 
-            }*/ print_r($valid);
+            }
+			if (empty($this->par01)) { 
+                $this->Err1 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par02)) { 
+                $this->Err2 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par03)) { 
+                $this->Err3 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par04)) { 
+                $this->Err4 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par05)) { 
+                $this->Err5 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par06)) { 
+                $this->Err6 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par07)) { 
+                $this->Err7 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par08)) { 
+                $this->Err8 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par09)) { 
+                $this->Err9 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par10)) { 
+                $this->Err10 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par11)) { 
+                $this->Err11 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par12)) { 
+                $this->Err12 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par13)) { 
+                $this->Err13 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par14)) { 
+                $this->Err14 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par15)) { 
+                $this->Err15 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par16)) { 
+                $this->Err16 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par17)) { 
+                $this->Err17 = "Please fill out this field.";
+                $valid = false; 
+            }
+			if (empty($this->par18)) { 
+                $this->Err18 = "Please fill out this field.";
+                $valid = false; 
+            } print_r($valid);
             return $valid;
         }
     }

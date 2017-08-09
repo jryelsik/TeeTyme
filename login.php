@@ -1,7 +1,5 @@
 <?php
 session_start();
-//connect to database
-//$db=mysqli_connect("localhost","root","","authentication");
 require "../../database/database.php";
 
 
@@ -21,7 +19,7 @@ if(isset($_POST['login_btn']))
     {
         $_SESSION['message']="You are now Loggged In";
         $_SESSION['username']=$username;
-        header("location:Persons/index.html");
+        header("location:Persons/");
     }
    else
    {
@@ -63,9 +61,7 @@ if(isset($_POST['login_btn']))
         <label for="username" class="textInput">Username</label>
         <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="password" class="textInput">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-        </div>	
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>	
         <button class="btn btn-lg btn-success btn-block" type="submit" name="login_btn">Sign in</button>
 		<label class="textInput"><br />Don't have an account?</label>
 		<a class="btn btn-lg btn-primary btn-block" href="register.php">Sign up</a>
