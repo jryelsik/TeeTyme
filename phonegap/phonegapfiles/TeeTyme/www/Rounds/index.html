@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        function retrieveNavBar() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("body").innerHTML = xhttp.responseText;
+                }
+            };
+            var URL = "https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/";
+            xhttp.open("GET", URL + "navbar.php", true);
+            xhttp.send();
+        }
+    </script>
+    <script>
+        $( document ).ready(function() { 
+            personsRequest("displayList");
+        });
+        
+        // Submit a request to the persons table.
+        function personsRequest(action, id) {
+            $.post(
+                "index.php",
+                "table="   + "tt_rounds"          +
+                "&action=" + action             +
+                "&id="     + id                 +
+                //"&person_id="   + $("#person_id").val()   +
+                //"&course_id="   + $("#course_id").val()   +
+				//"&teedate="     + $("#teedate").val()   +
+				//"&teetime="     + $("#teetime").val()   +
+				"&strokes01="   + $("#strokes01").val()	+
+				"&strokes02="   + $("#strokes02").val()	+	
+				"&strokes03="   + $("#strokes03").val()	+	
+				"&strokes04="   + $("#strokes04").val()	+	
+				"&strokes05="   + $("#strokes05").val()	+	
+				"&strokes06="   + $("#strokes06").val()	+	
+				"&strokes07="   + $("#strokes07").val()	+	
+				"&strokes08="   + $("#strokes08").val()	+	
+				"&strokes09="   + $("#strokes09").val()	+	
+				"&strokes10="   + $("#strokes10").val()	+	
+				"&strokes11="   + $("#strokes11").val()	+	
+				"&strokes12="   + $("#strokes12").val()	+
+				"&strokes13="   + $("#strokes13").val()	+	
+				"&strokes14="   + $("#strokes14").val()	+	
+				"&strokes15="   + $("#strokes15").val()	+	
+				"&strokes16="   + $("#strokes16").val()	+	
+				"&strokes17="   + $("#strokes17").val()	+	
+				"&strokes18="   + $("#strokes18").val()	
+            ).done(function( msg ) { 
+                $("#content").html( msg );
+            });
+        }
+    </script>
+    <style>
+        .btn {
+            width: 75px;
+        }
+				body {
+						padding-top: 70px;
+						/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+				}
+    </style>
+</head>
+<body onload="retrieveNavBar();">
+    <div id="body"></div>  
+    <div id="content"></div>
+</body>
+</html>
