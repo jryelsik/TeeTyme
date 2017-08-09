@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        function retrieveNavBar() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("body").innerHTML = xhttp.responseText;
+                }
+            };
+            var URL = "https://csis.svsu.edu/~jryelsik/cis355/TeeTyme(test)/";
+            xhttp.open("GET", URL + "navbar.php", true);
+            xhttp.send();
+        }
+    </script>
+    <script>
+        $( document ).ready(function() { 
+            personsRequest("displayList");
+        });
+        
+        // Submit a request to the persons table.
+        function personsRequest(action, id) {
+            $.post(
+                "index.php",
+                "table="   + "tt_persons"          +
+                "&action=" + action             +
+                "&id="     + id                 +
+                "&fname="   + $("#fname").val()   +
+                "&lname="   + $("#lname").val()   +
+								"&email="   + $("#email").val()   +
+								"&password="   + $("#password").val()   +
+								"&phone="   + $("#phone").val()   +
+								"&address="   + $("#address").val()   +
+								"&city="   + $("#city").val()   +
+								"&state="   + $("#state").val()   +
+								"&zip="   + $("#zip").val()				
+            ).done(function( msg ) { 
+                $("#content").html( msg );
+            });
+        }
+    </script>
+    <style>
+        .btn {
+            width: 75px;
+        }
+				body {
+						padding-top: 70px;
+						/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+				}
+    </style>
+</head>
+<body onload="retrieveNavBar();">
+    <div id="body"></div>  
+    <div id="content"></div>
+</body>
+</html>
